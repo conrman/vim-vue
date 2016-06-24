@@ -16,6 +16,6 @@ syntax region script keepend start=/<script\( lang="[a-zA-Z]\+"\)\?>/ end="</scr
 
 syntax include @CSS syntax/css.vim
 unlet b:current_syntax
-syntax region style keepend start=/<style\( lang="[a-zA-Z]\+"\)\?>/ end="</style>" contains=@CSS fold
+syntax region style keepend start=/<style\( \+scoped\)\?\( lang="[a-zA-Z]\+"\)\?>/ end="</style>" contains=@CSS fold
 
 let b:current_syntax = "vue"
